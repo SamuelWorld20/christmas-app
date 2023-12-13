@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'qoute_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -90,8 +91,13 @@ class _HomeScreenState extends State<HomeScreen>
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         _formKey.currentState!.save();
-                        Navigator.pushNamed(context, "/quote",
-                            arguments: _name);
+                        // Navigator.pushNamed(context, "/quote",
+                        //     arguments: _name);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => QuoteScreen(name: _name)),
+                        );
                       }
                     },
                     style: ElevatedButton.styleFrom(
