@@ -64,6 +64,64 @@ class _QuoteScreenState extends State<QuoteScreen> {
     quote = allQuotes[Random().nextInt(allQuotes.length)];
   }
 
+  void _showQuoteDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          content: Container(
+            decoration: BoxDecoration(
+              color: Color(0xffc63026),
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Santa Quote',
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    quote,
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Text(
+                        'Close',
+                        style: TextStyle(
+                          color: Colors.green,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,17 +161,13 @@ class _QuoteScreenState extends State<QuoteScreen> {
                   child: InkWell(
                     onTap: () {
                       generateRandomQuote();
+                      _showQuoteDialog();
                       setState(() {});
                     },
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                 );
               },
-            ),
-            SizedBox(height: 20),
-            Text(
-              quote,
-              style: TextStyle(fontSize: 16),
             ),
           ],
         ),
