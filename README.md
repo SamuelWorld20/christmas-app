@@ -22,7 +22,7 @@ The Christmas Greeting App is a user-friendly mobile application that welcomes u
 Follow these simple steps to get started with the Christmas Greeting App:
 
 1. Ensure you have Flutter installed. If not, follow the [Flutter installation guide](https://flutter.dev/docs/get-started/install).
-Or you can contact me via [email](ejalonibuoluwaseyi@gmail.com) to give you a link to install the app on your mobile device.
+Or you can contact me via `ejalonibuoluwaseyi@gmail.com` to give you a link to install the app on your mobile device.
 2. Clone this repository: `git clone https://github.com/SamuelWorld20/christmas-app`
 3. Navigate to the project directory: `cd christmas-app`
 4. Run the app: `flutter run`
