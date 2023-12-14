@@ -35,6 +35,12 @@ Or you can contact me via `ejalonibuoluwaseyi@gmail.com` to give you a link to i
 4. Witness an animated pop-up dialog revealing a delightful Christmas quote associated with the selected box.
 5. Share the joy by repeating the process or sharing quotes with friends and family.
 
+## Screenshots
+
+![Screenshot 1](assets/images/screenshots/screenshot1.png)
+![Screenshot 2](assets/images/screenshots/screenshot2.png)
+![Screenshot 3](assets/images/screenshots/screenshot3.png)
+
 ## Contributing
 
 Feel free to contribute to make this Christmas app even more festive! If you encounter any issues or have suggestions, please open an issue.
